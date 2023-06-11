@@ -4,13 +4,17 @@
 
 常类型是指使用类型修饰符const说明的类型，常类型的变量或对象的值是不能被更新的
 
+
+
 ## 2.作用
 
-- 定义变量，const定义的变量只有类型为整数或枚举，且以常量表达式初始化时才能作为常量表达式。其他情况下它只是一个 `const` 限定的变量，不要将与常量混淆。
+- 定义变量
 
-```c++
-const int a=100;
-```
+  `const`定义的变量只有类型为整数或枚举，且以常量表达式初始化时才能作为常量表达式。其他情况下它只是一个 `const` 限定的变量，不要将与常量混淆。
+
+  ```c++
+  const int a=100;
+  ```
 
 - [**const常量与define宏定义的区别**](https://www.cnblogs.com/lxd2502/p/4572368.html)
 
@@ -67,9 +71,11 @@ const int a=100;
 
 [问题没太看懂，回去翻书](https://github.com/Light-City/CPlusPlusThings/issues/5)
 
+
+
 ## 3.const对象默认为文件局部变量
 
-注意：非const变量默认为extern。要使const变量能够在其他文件中访问，必须在文件中显式的指定它为extern
+注意：非`const`变量默认为`extern`。要使`const`变量能够在其他文件中访问，必须在文件中显式的指定它为`extern`
 
 [const定义的全局变量不能被其他文件访问,必须加extern 才能被访问吗? -CSDN社区](https://bbs.csdn.net/topics/390332621?page=1#post-393482462)
 
@@ -133,6 +139,8 @@ int main(){
 
 > 编译通过，link通过。原因：main.cpp没有对a有任何的调用，所以在编译器阶段不需要在符号表里面查找a的地址
 
+
+
 ## 4.定义常量
 
 ```c++
@@ -147,6 +155,8 @@ const int i;
 > b为常量，不可更改
 >
 > i为常量，必须初始化
+
+
 
 ## 5.指针与const
 
@@ -173,51 +183,222 @@ char *const a;		//常指针、const指针
 const chat *const a;//指向const对象的const指针
 ```
 
-### 1.指向常量的指针
+1. **指向常量的指针**
 
-```c++
-int b = 10;
-int c = 100;
-const int *p = &b;
-*p = 10;		//报错，解引用不可改变
-p = &c;			//不会报错，而且*p会变为100
+   ```c++
+   int b = 10;
+   int c = 100;
+   const int *p = &b;
+   *p = 10;		//报错，解引用不可改变
+   p = &c;			//不会报错，而且*p会变为100
+   
+   const int p = 10;
+   const void *vp = &p;
+   void *vp = &p;	//报错，不能使用void *指针来保存const对象的地址，必须使用const void *
+   ```
 
-const int p = 10;
-const void *vp = &p;
-void *vp = &p;	//报错，不能使用void *指针来保存const对象的地址，必须使用const void *
-```
+   **允许把非const对象的地址赋给指向const对象的指针**
 
-**允许把非const对象的地址赋给指向const对象的指针**
+   ```c++
+   const int *ptr;
+   int val = 3;
+   ptr = &val;			// ok
+   ```
 
-```c++
-const int *ptr;
-int val = 3;
-ptr = &val;			// ok
-```
+   但是不能通过ptr指针来修改val的值，即使它指向的是非const对象
 
-但是不能通过ptr指针来修改val的值，即使它指向的是非const对象
+2. **常指针**
 
-### 2.常指针
+   const指针必须进行初始化，且const指针的解引用可以修改，但指向不能修改
 
-const指针必须进行初始化，且const指针的解引用可以修改，但指向不能修改
+   ```c++
+   int b = 10;
+   int c = 100;
+   int *const a;		//报错，必须初始化
+   int *const a=&b;
+   a = &c;				//报错，地址不能修改
+   *a = c;				//正确，解引用可以修改
+   ```
 
-```c++
-int b = 10;
-int c = 100;
-int *const a;		//报错，必须初始化
-int *const a=&b;
-a = &c;				//报错，地址不能修改
-*a = c;				//正确，解引用可以修改
-```
+3. **指向常量的常指针**
 
-### 3.指向常量的常指针
+   ```c++
+   const int b = 10;
+   const int c = 100;
+   const int *const p = &b;
+   p = &c;			//报错
+   *p = c;			//报错，哪个都不能修改
+   ```
 
-```c++
-const int b = 10;
-const int c = 100;
-const int *const p = &b;
-p = &c;			//报错
-*p = c;			//报错，哪个都不能修改
-```
+
 
 ## 6.函数中使用const
+
+1. **const修饰函数的参数**
+
+   （1）参数指针所指内容为常量不可变
+
+   ```c++
+   void stringcopy(chat *dst, const char *src);
+   ```
+
+   其中src是输入参数，dst是输出参数。给src加上const修饰之后，如果函数体内的语句试图改动src的内容，编译器将指出错误。
+
+   （2）参数为引用，为了增加效率同时防止修改
+
+   ```c++
+   void func(const A &a);
+   ```
+
+   对于非内部数据`【内部数据：不需要用户自己定义数据类型】`,`void func(A a)`这样的函数体内将产生`A`类型的临时对象用于复制参数a，而临时对象的构造、、复制、析构过程都将消耗时间
+
+   改`void func(A &a)`引用传递，仅借用一下参数的别名而已，不需要产生临时对象
+
+   > 但是`void func(A &a)`存在一个缺点：
+   >
+   > 引用传递有可能改变a，加上const修饰即可
+
+   但是对于内部数据而言，参数不存在构造、析构的过程，而复制也非常快，值传递和引用传递效率差不多
+
+   （3）传递过来的参数及指针本身在函数内不可变，无意义！
+
+   ```c++
+   void func(const int var);
+   void func(int *const var);
+   ```
+
+   表明参数在函数内不可被修改，但此处没有任何意义，var本身就是形参，在函数内不会改变。包括传入的形参为指针也是一样。输入参数采用值传递，由于函数将自动产生临时变量用于复制该参数，该输入参数本来就无需保护，所以不需要加`const`修饰
+
+2. **const修饰函数返回值**
+
+   （1）`const int`
+
+   本身无意义，参数返回本身就是赋给其他的变量
+
+   （2）`const int * func()`
+
+   指针指向的内容不变，解引用不变
+
+   （3）`int *const func()`
+
+   指针本身不可变，地址不可变
+
+3. **小结**
+
+   （1）对于非内部数据的输入参数，将`值传递`的方式改为`const引用传递`
+
+   （2）对于内部数据的输入参数，直接采用`值传递`
+
+
+
+## 7.类中使用const
+
+在一个类中，任何不会修改数据成员的函数都应该声明为`const`类型。如果在编写`const`成员函数时，不慎修改数据成员，或者调用了其它非`const`成员函数，编译器将指出错误，这无疑会提高程序的健壮性。
+
+使用`const`关键字进行说明的成员函数，称为`常成员函数`。只有常成员函数才有资格操作常量或常对象，没有使用`const`关键字进行说明的成员函数不能用来操作常对象。
+
+1. **对于类中的`const`成员变量必须通过初始化列表进行初始化**
+
+   ```c++
+   class Apple{
+   private:
+       int people[100];
+   public:
+       Apple(int i); 
+       const int apple_number;
+   };
+   
+   Apple::Apple(int i):apple_number(i){
+   
+   }
+   ```
+
+2. **`const`对象只能访问`const`成员函数,而非`const`对象可以访问任意的成员函数,包括`const`成员函数**
+
+   ```c++
+   // apple.cpp
+   class Apple{
+   private:
+       int people[100];
+   public:
+       Apple(int i); 
+       const int apple_number;			//初始化列表进行初始化
+       void take(int num) const;		//
+       int add();
+       int add(int num) const;
+       int getCount() const;
+   };
+   // apple.cpp
+   Apple::Apple(int i) : apple_number(i){	//初始化
+   }
+   
+   int Apple::add(int num){
+       take(num);
+       return 0;
+   }
+   
+   int Apple::add(int num) const{
+       take(num);
+       return 0;
+   }
+   
+   void Apple::take(int num) const{
+       cout << "take func " << num << endl;
+   }
+   
+   int Apple::getCount() const{
+       take(1);
+       //    add(); // error
+       return apple_number;
+   }
+   
+   int main(){
+       Apple a(2);
+       cout << a.getCount() << endl;
+       a.add(10);
+       const Apple b(3);
+       b.add(100);
+       return 0;
+   }
+   // main.cpp
+   ```
+
+   `getCount()`方法中调用了一个`add`方法，而`add`方法并非`const`修饰，所以运行报错。也就是说`const`成员函数只能访问`const`成员函数
+
+   ```c++
+   const Apple b(3);
+   b.add(); // error
+   ```
+
+   可以证明的是`const`对象只能访问`const`成员函数
+
+3. **除了上述的初始化`const`常量用初始化列表方式外，也可以通过下面方法：**
+
+   （1）将常量定义与`static`结合
+
+   ```c++
+   static const int aaple_number
+   ```
+
+   （2）在外面初始化
+
+   ```c++
+   const int Apple::apple_number = 10;
+   ```
+
+   （3）`C++11`中编译，可以直接在定义处初始化，在编译时加上`-std=c++11`
+
+   ```c++
+   static const int apple_number=10;
+   // 或者
+   const int apple_number=10;
+   ```
+
+4. **小结**
+
+   > **对于类中的`const`成员变量必须通过初始化列表进行初始化**
+   >
+   > **`const`对象只能访问`const`成员函数,而非`const`对象可以访问任意的成员函数,包括`const`成员函数**
+   >
+   > **除了上述的初始化`const`常量用初始化列表方式外，也可以通过下面方法**
+
