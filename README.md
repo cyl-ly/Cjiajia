@@ -1,5 +1,5 @@
 ## 基础部分
 
-1. [const](const/const.md)
-2. [static](static/static.md)
+1. [const](foundation/const/const.md)
+2. [static](foundation/static/static.md)
 
