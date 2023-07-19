@@ -1,2 +1,3 @@
 ## leetcode题目整理
-1. [两数之和](code/leet/two num.md)
+1.[two_num](leet/two_num.md)
+2.
