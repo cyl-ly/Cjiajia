@@ -4,4 +4,4 @@
 2. [static](foundation/static/static.md)
 
 ## 数据结构
-1. [vector源码](code/vector/vector.md)
+1. [vector](code/vector/vector.md)
