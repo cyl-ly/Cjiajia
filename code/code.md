@@ -7,4 +7,6 @@
 
 3. [第三大的数字](leet/third_maxnum.md)
 
-4. 
+4. [最短无序连续子数组](leet/shortest_unsorted_array.md)
+
+5. 
