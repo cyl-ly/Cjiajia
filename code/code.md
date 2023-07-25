@@ -11,4 +11,6 @@
 
 5. [种花问题](leet/can_place_flowers.md)
 
-6. 
+6. [三个数最大乘积](leet/max_of_three_numbers.md)
+
+7. 
