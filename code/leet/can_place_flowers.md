@@ -119,4 +119,35 @@ public:
    >
    > 内存消耗：19.7 MB, 在所有 C++ 提交中击败了86.84% 的用户
 
-2. 官方题解，贪心算法？
+2. 贪心算法？ 评论区优化的一个解法，官方的数字变化太灵活了·····
+
+   ```c++
+   class Solution {
+   public:
+       bool canPlaceFlowers(vector<int>& flowerbed, int n) {
+           for(int i=0;i<flowerbed.size();i++){
+               if(flowerbed[i]==0 && (i==0||flowerbed[i-1]==0) && (i==flowerbed.size()-1||flowerbed[i+1]==0)){
+               //当前位置没有花
+               //并且前面位置没有花，或者前面是边界
+               //并且后面位置没有花，或者后面是边界
+                   n--;		//插入花
+                   flowerbed[i]=1;
+               }
+               if(n<=0)
+                   return true;
+           }
+           return false;
+       }
+   };
+   ```
+
+   > 执行用时：16 ms, 在所有 C++ 提交中击败了58.94% 的用户
+   >
+   > 内存消耗：19.8 MB, 在所有 C++ 提交中击败了42.25% 的用户
+
+   妙啊，泰妙了
+
+## 总结
+
+1. **贪心算法思路！！！**
+2. 
