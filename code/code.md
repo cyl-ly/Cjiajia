@@ -13,4 +13,4 @@
 
 6. [三个数最大乘积](leet/max_of_three_numbers.md)
 
-7. 
+7. [子数组最大平均数](leet/max_average_subarray.md)
