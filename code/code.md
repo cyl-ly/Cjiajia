@@ -17,4 +17,4 @@
 
 8. [非递减数列**](leet/no_decrease_array.md)
 
-9. [最长递增子序列--动态规划待学习](leet/longest_increase_array.md)
+9. [最长递增子序列](leet/longest_increase_array.md) (动态规划待学习)
