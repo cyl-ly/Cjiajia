@@ -16,3 +16,5 @@
 7. [子数组最大平均数](leet/max_average_subarray.md)
 
 8. [非递减数列**](leet/no_decrease_array.md)
+
+9. [最长递增子序列--动态规划待学习](leet/longest_increase_array.md)
