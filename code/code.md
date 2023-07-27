@@ -18,3 +18,5 @@
 8. [非递减数列**](leet/no_decrease_array.md)
 
 9. [最长递增子序列](leet/longest_increase_array.md) (动态规划待学习)
+
+10. [数组的度**](leet/degree_of_array.md)
