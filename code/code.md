@@ -21,4 +21,4 @@
 
 10. [数组的度**](leet/degree_of_array.md)(有个题解思路一块还没看懂)
 
-11. 
+11. [1比特和2比特字符](leet/one_and_two_bit_char.md)
