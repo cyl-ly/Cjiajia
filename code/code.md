@@ -19,4 +19,6 @@
 
 9. [最长递增子序列](leet/longest_increase_array.md) (动态规划待学习)
 
-10. [数组的度**](leet/degree_of_array.md)
+10. [数组的度**](leet/degree_of_array.md)(有个题解思路一块还没看懂)
+
+11. 
