@@ -33,4 +33,6 @@
 
 16. [卡牌分组](leet/kapaifenzu.md)
 
-17. []()
+17. [有效的山脉数组](leet/shanmai.md)
+
+18. [122]()
