@@ -1,6 +1,6 @@
 [day1](#day1)
 [day2](#day2)
-
+[day3](#day3)
 #### day1
 
 1. `auto i=min_element()`返回的是迭代器
@@ -60,3 +60,23 @@
 4. 从头向后遍历，每找到一个特殊的段落，怎么进行处理
 
 5. `vector< pair<int,int> >`这里的格式需要空一格
+
+#### day3
+1. 不能用`vector.end()--`来返回最后一个元素迭代器
+
+2. `reverse()`函数可以翻转顺序
+
+3. set容器默认去重，且升序排序，可以通过复制vector进行排序去重
+
+   ```c++
+   set<int> s1(cnt.begin(), cnt.end());
+   vector<int> v1(s1.begin(),s1.end());
+   ```
+
+4. `vector`排序函数`sort(begin,end);`
+
+5. `vector`去重`v1.erase(unique(v1.begin(),v1.end()), v1.end());`
+
+6. 最大值最小值函数`max_element()`，返回的是迭代器
+
+7. 利用`max_element()`之后可以`-begin()`求得下标
