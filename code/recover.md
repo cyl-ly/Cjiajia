@@ -1,6 +1,7 @@
 [day1](#day1)
 [day2](#day2)
 [day3](#day3)
+[day4](#day4)
 #### day1
 
 1. `auto i=min_element()`返回的是迭代器
@@ -80,3 +81,11 @@
 6. 最大值最小值函数`max_element()`，返回的是迭代器
 
 7. 利用`max_element()`之后可以`-begin()`求得下标
+
+#### day4
+
+1. vector的位置插入
+
+2. **数字相加的类型总结**
+
+3. vector颠倒顺序
