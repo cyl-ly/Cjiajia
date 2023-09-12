@@ -36,3 +36,5 @@
 17. [有效的山脉数组](leet/shanmai.md)
 
 18. [数组形式的整式加法](leet/shuzuxingshi.md)
+
+19. [等价多米诺骨牌对的数量](leet/dengjia.md)
