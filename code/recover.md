@@ -2,6 +2,7 @@
 [day2](#day2)
 [day3](#day3)
 [day4](#day4)
+[day5](#day5)
 #### day1
 
 1. `auto i=min_element()`返回的是迭代器
@@ -89,3 +90,19 @@
 2. **数字相加的类型总结**
 
 3. vector颠倒顺序
+
+#### day5
+
+1. 不用判断map是否第一次出现，直接++，用数学公式统计次数
+
+2. ```c++
+   map<vector<int>,int> mp;
+   for(auto it: dominoes){
+       if(it[1]<it[0]) swap(it[0],it[1]);  //小的在前
+           mp[it]++;
+   }
+   for(auto it2:mp){
+       if(it2.second>1)
+           sum+=it2.second*(it2.second-1)/2;
+   }
+   ```
