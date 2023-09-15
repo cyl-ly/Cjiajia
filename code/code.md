@@ -40,3 +40,9 @@
 19. [等价多米诺骨牌对的数量](leet/dengjia.md)
 
 20. [构建乘积数组](leet/chengji.md)
+
+#### 贪心算法
+
+1. [分发饼干](leet/fenfabinggan.md)
+
+2. [无重叠区间](leet/qujian.md)
