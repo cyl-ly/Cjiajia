@@ -46,3 +46,5 @@
 1. [分发饼干](leet/fenfabinggan.md)
 
 2. [无重叠区间](leet/qujian.md)
+
+3. [用最少的箭引爆气球](leet/yinbao.md)
