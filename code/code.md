@@ -57,6 +57,8 @@
 
 3. [买卖股票的最佳时机](leet/maimaigupiao.md)
 
+4. [不同路径1](leet/butonglujing1.md)
+
 #### 最小生成树
 
 1. [prim](leet/prim.md)
