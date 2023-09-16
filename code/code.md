@@ -55,6 +55,8 @@
 
 2. [使用最小花费爬楼梯](leet/zuixiaohuafei.md)
 
+3. [买卖股票的最佳时机](leet/maimaigupiao.md)
+
 #### 最小生成树
 
 1. [prim](leet/prim.md)
