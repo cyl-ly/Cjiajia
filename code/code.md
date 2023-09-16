@@ -54,3 +54,7 @@
 1. [爬楼梯](leet/palouti.md)
 
 2. [使用最小花费爬楼梯](leet/zuixiaohuafei.md)
+
+#### 最小生成树
+
+1. [prim](leet/prim.md)
