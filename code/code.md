@@ -64,3 +64,7 @@
 #### 最小生成树
 
 1. [prim](leet/prim.md)
+
+#### 0-1背包问题
+
+1. [0-1背包](leet/beibao.md)
