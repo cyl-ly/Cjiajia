@@ -61,6 +61,8 @@
 
 5. [不同路径2](leet/butonglujing2.md)
 
+6. [整数拆分](leet/chaifen.md)
+
 #### 最小生成树
 
 1. [prim](leet/prim.md)
