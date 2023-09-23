@@ -274,7 +274,7 @@
 
    ![image-20230921124246639](test.assets/image-20230921124246639.png)
 
-2. 开始将位于0x10000的内核程序复制到0x00000处
+2. 开始将位于0x1000的内核程序复制到0x00000处
 
    ```
    //代码路径：boot/setup.s ……
@@ -297,7 +297,121 @@
 
 
 
-### 1.5.2设置中断描述符表和全局描述符表  98页
+### 1.5.2设置中断描述符表和全局描述符表 
+1. 设置所需要的数据分别在idt_48和gdt_48所对应的光标处，和寄存器的对应方式
 
+![image-20230923084241394](test.assets/image-20230923084241394.png)
+
+> 16位的中断机制用的是中断向量表，起始位置在0x00000处，位置固定
+>
+> 32位的中断机制用的是中断描述符表(IDT)，位置不固定，由IDTR来锁定其位置
+>
+> GDT是保护模式下管理段描述符的数据结构
+
+2. IDT虽然已经设置，但还是空表，因为目前已经关中断，无需中断程序
+
+
+
+### 1.5.3 打开A20，实现32位寻址
+
+![image-20230923084902232](test.assets/image-20230923084902232.png)
+
+1. 打开A20，CPU可以进行32位寻址，最大寻址空间为4GB，扩展到8个F
+2. 最大只能支持16MB的物理内存，但是线性寻址空间已经是4GB
+
+```
+//代码路径：boot/setup.s ……
+！that was painless,now we enable A20
+
+call empty_8042
+mov al，#0xD1！command write out#0x64，al
+call empty_8042
+mov al，#0xDF！A20 on out#0x60，al
+call empty_8042
+……
+```
+
+> 第21根(A20)至第32根地址线的选通控制意味着寻址模式的切换
+>
+> 在实模式下，寻址超过0xfffff时，CPU将回滚至内存起始地址，但A20开启后，相当于关闭了回滚模式
+
+
+
+### 1.5.4 为保护模式执行head.s做准备
+
+> 为建立保护模式下的中断机制，setup对可编程中断控制器8259A进行重新编程
+
+```
+//代码路径：boot/setup.s
+……
+mov al，#0x11！initialization sequence out#0x20，al！
+send it to 8259A-1
+.word 0x00eb，0x00eb！jmp$+2，jmp$+2
+out#0xA0，al！and to 8259A-2
+.word 0x00eb，0x00eb
+mov al，#0x20！start of hardware int's（0x20）
+out#0x21，al
+.word 0x00eb，0x00eb
+mov al，#0x28！start of hardware int's 2（0x28）
+out#0xA1，al
+.word 0x00eb，0x00eb
+mov al，#0x04！8259-1 is master out#0x21，al
+.word 0x00eb，0x00eb
+mov al，#0x02！8259-2 is slave out#0xA1，al
+.word 0x00eb，0x00eb
+mov al，#0x01！8086 mode for both out#0x21，al
+.word 0x00eb，0x00eb
+out#0xA1，al
+.word 0x00eb，0x00eb
+mov al，#0xFF！mask off all interrupts for now
+out#0x21，al
+.word 0x00eb，0x00eb
+out#0xA1，al
+……
+```
+
+![image-20230923085807179](test.assets/image-20230923085807179.png)
+
+1. 在保护模式下，int 0x00-int 0x1f被保留内部中断（不可屏蔽）和异常中断
+2. setup程序将CPU工作模式设置为保护模式，CR0寄存器第0位（PE）置1
+
+```
+//代码路径：boot/setup.s
+……
+mov ax，#0x0001！protected mode（PE）bit lmsw ax！
+This is it！
+jmpi 0，8！jmp offset 0 of segment 8（cs）
+……
+```
+
+3. 转为保护模式后，重要特征就是根据GDT决定后续执行哪里的程序，setup事先已经安排好了，从setup跳转到head程序执行
+
+![image-20230923090945921](test.assets/image-20230923090945921.png)
+
+```
+//代码路径：boot/setup.s
+……
+jmpi 0，8
+……
+//0为段内偏移，8是保护模式下的段选择符
+//但是必须把8看做1
+//这里1000的最后两位（00）表示内核特权级，与之相对的用户特权级是11；
+//第三位的0表示GDT，如果是1，则表示LDT；
+//1000的1表示所选的表（在此就是GDT）的1项（GDT项号排序为0项、1项、2项，这里也就是第2项）来确定代码段的段基址和段限长等信息
+```
+
+![image-20230923091102369](test.assets/image-20230923091102369.png)
+
+![image-20230923091113227](test.assets/image-20230923091113227.png)
+
+![image-20230923091134610](test.assets/image-20230923091134610.png)
+
+> setup程序至此执行完毕，为保护模式做了一系列准备，但是还不够，后续将由head完成
+
+
+
+### 1.5.5 head.s开始执行
+
+1. 执行main函数之前，先要执行由汇编代码生成的程序，即bootsect、setup和head，之后才执行由main函数开始的C语言的操作系统内核程序
 
 
