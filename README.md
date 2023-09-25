@@ -12,6 +12,7 @@
 
 2. [题目总结](code/recover.md)
 
-## UCAS
+## [C++ Primer](primer/primer.md)
 
+## UCAS
 #### [操作系统](ucas/ucas.md)
