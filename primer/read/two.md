@@ -127,3 +127,136 @@ int *p2 = 0;
 int *p3 = NULL;		//头文件cstdlib
 ```
 
+2. 指针也可以用在if判断条件中
+
+```c++
+int *p1 = 0;
+int *p2 = &num;
+
+if(p1)		//false
+if(p2)		//true
+```
+
+3. `void*`指针，可用于存放任意对象的地址，但是我们并不知道地址中是什么类型的操作对象，所以不能直接操作`void*`指针所指的对象
+4. 指向指针的指针
+
+```c++
+int main() { 
+	int a = 10;
+	int *p1 = &a;
+	int **p2 = &p1;
+
+	cout<<"p1 "<<p1<<endl;
+	cout<<"*p1 "<<*p1<<endl;
+    
+	cout<<"p2 "<<p2<<endl;
+	cout<<"*p2 "<<*p2<<endl;
+	cout<<"**p2 "<<**p2<<endl;
+	return 0;
+} 
+
+p1		0x7fff3c91c4f8		//p1内存单元中存放的a的地址
+*p1		10					
+p2		0x7fff3c91c4f0		//p2内存单元中存放的p1单元的地址
+*p2		0x7fff3c91c4f8		//*p2解一层引用，为p1单元内的值
+**p2	10					//解两层引用，找到a的值
+```
+
+5. 指向指针的引用
+
+> 不能定义指向引用的指针，但是可以定义指针的引用
+
+```c++
+int i = 10;
+int *p;
+int *&r = p;		//对指针p的引用
+
+r = &i;			//等价于令p指向i
+*r = 0;			//将i的值改为0
+```
+
+> *&r，从右往左阅读，离变量名最近的符号对变量的类型有最直接的影响
+
+
+
+## 2.4 const限定符
+
+- const对象必须初始化，创建后其值就不能再被改变了
+- 当多个文件中出现同名的const变量时，等同于在不同文件中分别定义了独立的变量
+- extern const——只在一个文件中定义，可以在其他文件中使用同一个变量
+
+```c++
+//file1.cpp 定义并初始化了一个常量，该常量能被其他文件访问
+extern const int buffsize = 512;
+
+//file1.h 头文件，与file1.cpp中的变量是同一个
+extern const int buffsize;
+```
+
+
+
+### 2.4.1 const的引用
+
+```c++
+const int ci = 1024;
+const int &p = ci;		//正确，引用及其对应的对象都是常量
+p = 42;					//错误，p是对常量的引用
+int &p2 = ci;			//错误，试图让一个非常量引用指向一个常量对象
+```
+
+> 前文提到引用的类型必须与其所引用对象类型一致，但这里存在两个例外
+
+```c++
+int i = 42;
+const int &r1 = i;				//允许，但不能通r1修改i的值，例外
+const int &r2 = 42;				//允许
+const int &r3 = r1*2;			//允许
+int &r4 = r1*2;					//错误
+```
+
+```c++
+double num = 3.14;
+const int &r = num;				//允许，例外
+
+//编译器做法
+//const int temp = num;
+//const int &r = temp;
+```
+
+
+
+### 2.4.2 指针和const
+
+> 要想存放常量对象的地址，只能使用指向常量的指针
+
+```c++
+const double pi = 3.14;
+double *ptr = &pi;				//错误
+const double *cptr = &pi;		//正确
+*cptr = 42;					//错误，不能修改
+```
+
+> 前面提到指针的类型必须和所指对象的类型一致，但是也存在两种例外
+
+```c++
+const double *cptr;
+double num = 3.12;
+cptr = &num;			//允许，例外，但不能通过cptr改变num的值
+```
+
+
+
+1. 指针和const
+
+> const在*的左侧，指const用来修饰指针所指向的变量，不能改变指针的解引用
+>
+> const在*的右侧，指const本身就是修饰指针本身，即指针本身是常量，不能修改指针指向地址
+
+```c++
+const char *a;		//指向常量的指针，不能改变解引用
+char const *a;		//同上
+char *const a;		//常指针、const指针，不能改变地址
+const chat *const a;//指向const对象的const指针
+```
+
+
