@@ -63,6 +63,8 @@
 
 6. [整数拆分](leet/chaifen.md)
 
+7. [分割等和子集](leet/denghe.md)
+
 #### 最小生成树
 
 1. [prim](leet/prim.md)
