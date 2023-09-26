@@ -1,12 +1,3 @@
-
-
-1. [const](foundation/const/const.md)
-2. [static](foundation/static/static.md)
-
-
-1. [vector](code/vector/vector.md)
-
-
 ## leetcode
 1. [刷题笔记](code/code.md)
 
