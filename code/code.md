@@ -65,6 +65,8 @@
 
 7. [分割等和子集](leet/denghe.md)
 
+8. [最后一块石头的重量2](leet/zuihou2.md)
+
 #### 最小生成树
 
 1. [prim](leet/prim.md)
@@ -73,4 +75,6 @@
 
 1. [0-1背包](leet/beibao.md)
 
-2. [分割等分子集-动态规划No.7](leet/denghe.md)
+2. [分割等分子集---动态规划No.7](leet/denghe.md)
+
+3. [最后一块石头的重量2---动态规划No.8](leet/zuihou2.md)
