@@ -67,6 +67,8 @@
 
 8. [最后一块石头的重量2](leet/zuihou2.md)
 
+9. [打家劫舍](leet/dajia.md)
+
 #### 最小生成树
 
 1. [prim](leet/prim.md)
