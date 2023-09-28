@@ -42,6 +42,7 @@
 
 20. [构建乘积数组](leet/chengji.md)
 
+21. [移除元素](leet/move.md)
 #### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
