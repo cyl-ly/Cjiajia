@@ -43,6 +43,8 @@
 20. [构建乘积数组](leet/chengji.md)
 
 21. [移除元素](leet/move.md)
+
+22. [有序数组的平方](leet/youxushu.md)
 #### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
