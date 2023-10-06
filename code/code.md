@@ -4,6 +4,8 @@
 2. [回文数](leet/palindrome_number.md)
 
 数组专题：
+1. [长度最小的子数组](leet/changduxiao.md)
+
 2. [二分查找](leet/erfen.md)
 
 3. [第三大的数字](leet/third_maxnum.md)
