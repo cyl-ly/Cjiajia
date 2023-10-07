@@ -3,7 +3,8 @@
 1. [两数之和](leet/two_num.md)
 2. [回文数](leet/palindrome_number.md)
 
-数组专题：
+### 数组：
+
 1. [长度最小的子数组](leet/changduxiao.md)
 
 2. [二分查找](leet/erfen.md)
@@ -47,7 +48,13 @@
 21. [移除元素](leet/move.md)
 
 22. [有序数组的平方](leet/youxushu.md)
-#### 贪心算法
+
+### 链表
+
+1. [移除链表元素](leet/yichu.md)
+
+2. [2]()
+### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
 
@@ -55,7 +62,7 @@
 
 3. [用最少的箭引爆气球](leet/yinbao.md)
 
-#### 动态规划
+### 动态规划
 
 1. [爬楼梯](leet/palouti.md)
 
@@ -75,11 +82,11 @@
 
 9. [打家劫舍](leet/dajia.md)
 
-#### 最小生成树
+### 最小生成树
 
 1. [prim](leet/prim.md)
 
-#### 0-1背包问题
+### 0-1背包问题
 
 1. [0-1背包](leet/beibao.md)
 
