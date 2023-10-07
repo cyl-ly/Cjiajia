@@ -53,7 +53,7 @@
 
 1. [移除链表元素](leet/yichu.md)
 
-2. [2]()
+2. [设计链表**](leet/shejilianbiao.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
