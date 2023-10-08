@@ -56,6 +56,8 @@
 2. [设计链表**](leet/shejilianbiao.md)
 
 3. [两两交换链表中的节点](leet/liangliang.md)
+
+4. [删除链表的倒数第n个节点](leet/shanchulian.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
