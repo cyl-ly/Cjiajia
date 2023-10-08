@@ -60,6 +60,8 @@
 4. [删除链表的倒数第n个节点](leet/shanchulian.md)
 
 5. [链表相交](leet/xiangjiao.md)
+
+6. [环形链表2](leet/huanxing2.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
