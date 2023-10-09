@@ -62,6 +62,12 @@
 5. [链表相交](leet/xiangjiao.md)
 
 6. [环形链表2](leet/huanxing2.md)
+
+### 哈希表
+
+1. [哈希表基础](leet/haxijichu.md)
+
+2. [有效的字母异位词](leet/yiwei.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
