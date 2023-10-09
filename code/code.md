@@ -68,6 +68,8 @@
 1. [哈希表基础](leet/haxijichu.md)
 
 2. [有效的字母异位词](leet/yiwei.md)
+
+3. [两个数组的交集](leet/jiaoji.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
