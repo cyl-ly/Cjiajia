@@ -76,6 +76,8 @@
 5. [快乐数](leet/kuaile.md)
 
 6. [四数之和2](leet/sishu.md)
+
+7. [三数之和-细节多](leet/sanshu.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
