@@ -106,6 +106,8 @@
 
 9. [打家劫舍](leet/dajia.md)
 
+10. [最大子数组和](leet/zuidazi.md)
+
 ### 最小生成树
 
 1. [prim](leet/prim.md)
