@@ -74,6 +74,8 @@
 4. [两个数组的交集2](leet/jiaoji2.md)
 
 5. [快乐数](leet/kuaile.md)
+
+6. [四数之和2](leet/sishu.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
