@@ -78,6 +78,8 @@
 6. [四数之和2](leet/sishu.md)
 
 7. [三数之和-细节多](leet/sanshu.md)
+
+8. [四数之和](leet/sishuzhihe.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
