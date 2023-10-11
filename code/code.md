@@ -88,6 +88,8 @@
 2. [反转字符串2](leet/fanzhuan2.md)
 
 3. [反转字符串中的单词](leet/fanzhuandanci.md)
+
+4. [找出字符串中第一个匹配项](leet/kmp.md)
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
