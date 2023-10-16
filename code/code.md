@@ -92,6 +92,11 @@
 4. [找出字符串中第一个匹配项](leet/kmp.md)
 
 5. [重复的子字符串](leet.chongfu.md)
+
+### 栈
+
+1. [有效的括号](leet/youxiaode.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
