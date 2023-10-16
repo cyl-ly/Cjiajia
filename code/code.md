@@ -99,6 +99,8 @@
 
 2. [删除字符中所有相邻的重复项](leet/shanchuzifuzhong.md)
 
+3. [逆波兰式求表达值](leet/nibolan.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
