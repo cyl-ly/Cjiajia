@@ -97,6 +97,8 @@
 
 1. [有效的括号](leet/youxiaode.md)
 
+2. [删除字符中所有相邻的重复项](leet/shanchuzifuzhong.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
