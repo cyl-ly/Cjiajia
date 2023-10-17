@@ -105,6 +105,8 @@
 
 5. [前k个高频元素——优先级队列](leet/qiank.md)
 
+6. [单调队列和优先级队列](leet/danheyou.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
