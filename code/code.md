@@ -101,6 +101,10 @@
 
 3. [逆波兰式求表达值](leet/nibolan.md)
 
+4. [滑动窗口最大值——单调队列](leet/huadongchuang.md)
+
+5. [前k个高频元素——优先级队列](leet/qiank.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
