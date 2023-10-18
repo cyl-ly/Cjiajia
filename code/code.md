@@ -107,6 +107,10 @@
 
 6. [单调队列和优先级队列](leet/danheyou.md)
 
+### 二叉树
+
+1. [二叉树的遍历](leet/shubianli.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
