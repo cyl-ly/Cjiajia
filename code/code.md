@@ -115,6 +115,8 @@
 
 1. [回溯算法理论基础](leet/huisujichu.md)
 
+2. [组合](leet/zuhe.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
