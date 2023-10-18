@@ -117,6 +117,8 @@
 
 2. [组合](leet/zuhe.md)
 
+3. [组合总和2](leet/zuhezonghe2.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
