@@ -119,6 +119,10 @@
 
 3. [组合总和2](leet/zuhezonghe2.md)
 
+4. [N皇后](leet/nhuang.md)
+
+5. [N皇后变体——OJ](leet/nhuangoj.md)
+
 ### 贪心算法
 
 1. [分发饼干](leet/fenfabinggan.md)
