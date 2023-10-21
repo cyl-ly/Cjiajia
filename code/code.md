@@ -169,7 +169,7 @@
 
 1. [只出现一次的数字](leet/zhichuxian.md)
 
-2. [只出现一次的数字3](leet/zhuchuxian3.md)
+2. [只出现一次的数字3](leet/zhichuxian3.md)
 
 3. [山脉数组的顶峰索引](leet/shanmaishuzu.md)
 
