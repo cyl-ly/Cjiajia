@@ -164,3 +164,17 @@
 2. [分割等分子集---动态规划No.7](leet/denghe.md)
 
 3. [最后一块石头的重量2---动态规划No.8](leet/zuihou2.md)
+
+### 左神
+
+1. [只出现一次的数字](leet/zhichuxian.md)
+
+2. [只出现一次的数字3](leet/zhuchuxian3.md)
+
+3. [山脉数组的顶峰索引](leet/shanmaishuzu.md)
+
+4. [寻找峰值](leet/xunzhao.md)
+
+5. [交易逆序对的总数](leet/jiaoyi.md)
+
+6. [颜色分类](leet/yanse.md)
