@@ -214,3 +214,5 @@
 ### 周赛
 
 1. [元素和最小的山形三元组II](leet/yuansuhe.md)
+
+2. [合法分组的最少组数](leet/hefafenzu.md)
