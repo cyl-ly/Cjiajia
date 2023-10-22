@@ -63,6 +63,10 @@
 
 6. [环形链表2](leet/huanxing2.md)
 
+7. [两数之和](leet/liangshu.md)
+
+8. [合并两个有序链表](leet/hebing.md)
+
 ### 哈希表
 
 1. [哈希表基础](leet/haxijichu.md)
@@ -80,6 +84,8 @@
 7. [三数之和-细节多](leet/sanshu.md)
 
 8. [四数之和](leet/sishuzhihe.md)
+
+9. [最接近的三数之和](leet/zuijiejin.md)
 
 ### 字符串
 
@@ -178,3 +184,7 @@
 5. [交易逆序对的总数](leet/jiaoyi.md)
 
 6. [颜色分类](leet/yanse.md)
+
+### 周赛
+
+1. [元素和最小的山形三元组II](leet/yuansuhe.md)
