@@ -93,6 +93,8 @@
 
 8. [合并两个有序链表](leet/hebing.md)
 
+9. [反转链表II *](leet/fanzhuanlian.md)
+
 ### 哈希表
 
 1. [哈希表基础](leet/haxijichu.md)
@@ -210,6 +212,8 @@
 5. [交易逆序对的总数](leet/jiaoyi.md)
 
 6. [颜色分类](leet/yanse.md)
+
+7. [回文链表](leet/huiwen.md)
 
 ### 周赛
 
