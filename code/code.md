@@ -95,6 +95,14 @@
 
 9. [反转链表II *](leet/fanzhuanlian.md)
 
+10. [回文链表](leet/huiwen.md)
+
+11. [删除链表中的节点](leet/shanchudian.md)
+
+12. [删除排序链表的重复节点](leet/shanchupai.md)
+
+13. [删除排序链表的重复节点II](leet/shanchupai2.md)
+
 ### 哈希表
 
 1. [哈希表基础](leet/haxijichu.md)
