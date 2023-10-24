@@ -103,6 +103,8 @@
 
 13. [删除排序链表的重复节点II](leet/shanchupai2.md)
 
+14. [二叉树展开为链表](leet/erchashu.md)
+
 ### 哈希表
 
 1. [哈希表基础](leet/haxijichu.md)
