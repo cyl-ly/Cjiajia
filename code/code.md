@@ -105,6 +105,14 @@
 
 14. [二叉树展开为链表](leet/erchashu.md)
 
+15. [旋转链表](leet/xuanzhuan.md)
+
+16. [链表求和](leet/qiuhe.md)
+
+17. [两数相加](leet/xiangjia.md)
+
+18. [分隔链表](leet/fenge.md)
+
 ### 哈希表
 
 1. [哈希表基础](leet/haxijichu.md)
