@@ -135,6 +135,14 @@
 
 9. [最接近的三数之和](leet/zuijiejin.md)
 
+10. [最长的连续序列](leet/zuichang.md)
+
+11. [单词规律](leet/danci.md)
+
+12. [数组中的k-diff数组](leet/shuzu.md)
+
+13. [同构字符串](leet/tonggou.md)
+
 ### 字符串
 
 1. [反转字符串](leet/fanzhuan.md)
