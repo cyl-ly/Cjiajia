@@ -113,6 +113,8 @@
 
 18. [分隔链表](leet/fenge.md)
 
+19. [重排链表](leet/chongpai.md)
+
 ### 哈希表
 
 1. [哈希表基础](leet/haxijichu.md)
@@ -230,8 +232,6 @@
 5. [交易逆序对的总数](leet/jiaoyi.md)
 
 6. [颜色分类](leet/yanse.md)
-
-7. [回文链表](leet/huiwen.md)
 
 ### 周赛
 
