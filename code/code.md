@@ -143,6 +143,22 @@
 
 13. [同构字符串](leet/tonggou.md)
 
+14. [随机链表的复制](leet/suiji.md)
+
+15. [两个列表的最小索引总和](leet/suoyin.md)
+
+16. [存在重复元素II](leet/cunzai.md)
+
+17. [最长和谐子序列](leet/zuichanghexie.md)
+
+18. [砖墙](leet/zhuanqiang.md)
+
+19. [和为k的数组](leet/heweik.md)
+
+20. [连续的子数组和](leet.lianxude.md)
+
+21. [连续数组](leet/lianxushuzu.md)
+
 ### 字符串
 
 1. [反转字符串](leet/fanzhuan.md)
