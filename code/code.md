@@ -185,6 +185,12 @@
 
 6. [单调队列和优先级队列](leet/danheyou.md)
 
+7. [下个更大的元素I](leet/xiage1.md)
+
+8. [下个更大的元素II](leet/xiage2.md)
+
+9. [每日温度](leet/wendu.md)
+
 ### 二叉树
 
 1. [二叉树的遍历](leet/shubianli.md)
