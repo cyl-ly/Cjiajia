@@ -191,6 +191,18 @@
 
 9. [每日温度](leet/wendu.md)
 
+10. [子数组的最小值之和](leet/zishuzude.md)
+
+11. [柱状图中的最大矩形](leet/zhuzhuangtu.md)
+
+12. [最大矩形](leet/zuidajuxing.md)
+
+13. [最大宽度坡](leet/zuidakuan.md)
+
+14. [去除重复字母](leet/quchuchong.md)
+
+15. [统计全1子矩形](leet/tongji.md)
+
 ### 二叉树
 
 1. [二叉树的遍历](leet/shubianli.md)
