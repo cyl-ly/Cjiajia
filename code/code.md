@@ -275,6 +275,14 @@
 
 6. [颜色分类](leet/yanse.md)
 
+7. [航班信息预定](leet/hangban.md)——前缀和
+
+8. [洛谷——等差差分例题](leet/luogu.md)
+
+9. [二维区域和检索-矩阵不可变](leet/erwei.md)——二维前缀和
+
+10. [最大以1为边界的长方形](leet/zuida.md)——前缀和变形
+
 ### 周赛
 
 1. [元素和最小的山形三元组II](leet/yuansuhe.md)
